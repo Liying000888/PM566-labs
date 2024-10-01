@@ -1,0 +1,24 @@
+---
+title: "Lab 5"
+format: html
+editor: visual
+---
+
+```{r}
+# Step 1
+setwd("~/Documents")
+dir.create("PM566-labs")
+setwd("PM566-labs")
+# Step 2
+download.file(
+  "https://raw.githubusercontent.com/USCbiostats/PM566/master/website/content/assignment/05-lab.Rmd",
+  destfile = "README.Rmd"
+  )
+# Step 3: Happens on Github
+# Step 4
+system("git init && git add README.Rmd")
+system('git commit -m "First commit"')
+# Step 5
+system("git remote add origin git@github.com:[liying000888]/PM566-labs")
+system("git push -u origin master")
+```
